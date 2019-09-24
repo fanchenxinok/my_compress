@@ -32,7 +32,7 @@ void RandM(int *pOut, int m)
 		pOut[i] = i;
 	}
 
-	srand(time(NULL));
+	srand(time(NULL) + rand());
 	i = m;
 	while(i > 0){
 		int randIdx = rand() % i;
@@ -52,7 +52,7 @@ void RandM_N(int *pOut, int m, int n)
 		pTmp[i] = i;
 	}
 
-	srand(time(NULL));
+	srand(time(NULL) + rand());
 	i = n;
 	while(j < m){
 		int randIdx = rand() % i;
@@ -93,7 +93,7 @@ void RandM_N2(int *pOut, int m, int n)
 		setBit(pMap, i);
 	}
 
-	srand(time(NULL));
+	srand(time(NULL) + rand());
 	i = 0;
 	while(i < m){
 		int randIdx = rand() % n;
